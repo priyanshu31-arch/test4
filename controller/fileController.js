@@ -28,7 +28,7 @@ export const uploadFile = async (req, res) => {
       uploadStream.end(req.file.buffer);
     });
 
-    const expiryTime = new Date(Date.now() + 60 * 60 * 1000); // 1 hour
+    const expiryTime = new Date(Date.now() + 60 * 60 * 1000); 
 
     const newFile = new File({
       filename: req.file.originalname,
